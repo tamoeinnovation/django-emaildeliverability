@@ -8,6 +8,7 @@ from emaildeliverability.settings import (
     get_timeout,
     get_user,
     get_interval,
+    get_prefix
 )
 from imap_tools import MailBox, AND
 from loguru import logger
@@ -18,7 +19,7 @@ def emaildeliverability(request):
     now = datetime.now()
     dt_string = now.strftime("%Y%m%d%H%M%S")
 
-    subject = f"____DELIVERABILITY____{dt_string}"
+    subject = f"__{get_prefix()}_{dt_string}"
     logger.debug(f"Sending with subject: {subject}")
     mail = EmailMessage(
         subject=subject,

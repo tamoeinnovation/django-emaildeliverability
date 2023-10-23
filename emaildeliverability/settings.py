@@ -21,6 +21,10 @@ def get_interval():
     return get_config().get("INTERVAL", 5)
 
 
+def get_prefix():
+    return get_config().get("PREFIX", "DELIVERABILITY")
+
+
 def get_server():
     server = get_config().get("SERVER")
 
