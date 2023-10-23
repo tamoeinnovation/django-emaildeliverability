@@ -1,8 +1,6 @@
 # Emaildeliverability
 
-A Django app to ensure that emails reach their intended destination.
-
-
+A Django app that help monitoring systems to ensure that emails reach their intended destination.
 
 ## Installation
 
